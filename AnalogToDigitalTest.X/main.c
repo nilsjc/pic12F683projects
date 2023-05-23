@@ -1,7 +1,5 @@
 /*
  * File:   main.c
- * Author: EDVNIL
- *
  * Created 21 maj 2023
  * Nils Edvardsson
  * PIC12F683
@@ -10,9 +8,6 @@
 
 // PIC12F683 Configuration Bit Settings
 
-// 'C' source line config statements
-
-// CONFIG
 #pragma config FOSC = INTOSCIO  // Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O function on RA5/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
@@ -55,28 +50,6 @@ void main(void) {
         PIN_2 = (result & 0b0010) ? 1 : 0;
         PIN_3 = (result & 0b0100) ? 1 : 0;
         PIN_4 = (result & 0b1000) ? 1 : 0;
-        /*
-        if(result & 0b0001){
-            PIN_1 = 1;
-        }else{
-            PIN_1 = 0;
-        }
-        if(result & 0b0010){
-            PIN_2 = 1;
-        }else{
-            PIN_2 = 0;
-        }
-        if(result & 0b0100){
-            PIN_3 = 1;
-        }else{
-            PIN_3 = 0;
-        }
-        if(result & 0b1000){
-            PIN_4 = 1;
-        }else{
-            PIN_4 = 0;
-        }
-        */
     }
     return;
 }
